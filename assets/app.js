@@ -210,6 +210,15 @@ function KeyboardClick(e){
     switch (keyId) {
         case 8:
             let newDisplay = display.innerHTML.slice(0,-1);
+            if (num1==currentNum) {
+                num1 = Number(newDisplay);
+                currentNum = num1;
+            }
+            else if(num2==currentNum){
+                num2 = Number(newDisplay);
+                currentNum = num2;
+
+            }
             display.innerHTML = newDisplay;
             if (display.innerHTML == "") {
                 display.innerHTML = 0;
