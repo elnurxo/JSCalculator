@@ -1,0 +1,79 @@
+*{
+    font-family: 'Roboto';
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('http://isohedral.ca/wp-content/uploads/2019/12/cyls.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.calculator-wrapper{
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.941);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+}
+.calculator-monitor{
+    height: 25%;
+    background: rgba(0, 0, 0, 0.615);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-right: 30px;
+}
+.calculator-body{
+    height: 75%;
+    padding: 20px;
+}
+.display{
+    color: white;
+    font-size: 40px;
+}
+.calc-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calc-item button{
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition: .1s ease-in-out;
+}
+.orange-btn{
+    background: orange !important;
+    color: white;
+}
+.faded-btn{
+    background: rgba(255, 255, 255, 0.599) !important;
+}
+.calc-item button:hover{
+    background: rgba(255, 255, 255, 0.573);
+    transform: scale(0.9);
+}
