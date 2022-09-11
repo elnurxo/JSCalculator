@@ -39,23 +39,29 @@ buttons.forEach((button)=>{
         }     
         //Positive-Negative
         if (button.classList.contains("positive-negative")) {
-           if (num1!==undefined && currentNum==num1) {
+           if (currentNum==num1) {
                 if (num1>0) {
+                    console.log('its positive now: ', num1);
                     num1 = num1*(-1);
+                    currentNum =  num1;
                     display.textContent = num1;
                 }
                 else{
+                    console.log('its negative now: ', num1);
                     num1 = num1*(-1);
+                    currentNum =  num1;
                     display.textContent = num1;
                 }
            }
-           if (num2!==undefined && currentNum==num2) {
+           if (currentNum==num2) {
                 if (num2>0) {
                     num2 = num2*(-1);
+                    currentNum =  num2;
                     display.textContent = num2;
                 }
                 else{
                     num2 = num2*(-1);
+                    currentNum =  num2;
                     display.textContent = num2;
                 }
            }
@@ -135,17 +141,16 @@ buttons.forEach((button)=>{
         }
         //Equals
         if (button.classList.contains("equals")) {
-            if (display.textContent!=latestEquals && symbol!=undefined || (display.textContent==00)) {
-                num1= calculate(num1,num2,symbol);
-                latestEquals = num1;
-                display.textContent = num1;
-                currentNum = Number(num1);
-                num1 = Number(num1);
-                num2 = undefined;
-                symbol = undefined;
+            if ((display.textContent!=latestEquals && num2!=undefined) || symbol!=undefined || (display.textContent==0)) {
+                    num1= calculate(num1,num2,symbol);
+                    latestEquals = num1;
+                    display.textContent = num1;
+                    currentNum = Number(num1);
+                    num1 = Number(num1);
+                    num2 = undefined;
+                    symbol = undefined;
            }
         }
-      
    });
 });
 
