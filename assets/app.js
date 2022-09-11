@@ -9,11 +9,11 @@ let latestEquals=0;
 
 buttons.forEach((button)=>{
    button.addEventListener("click",function(){
-    var audio = new Audio("../sound/buttonClick.mp3");
-    audio.play();
+    // var audio = new Audio("../sound/buttonClick.mp3");
+    // audio.play();
         //Numbers digit get
         if (button.classList.contains("digit-btn")) {
-            if (display.textContent.toLocaleLowerCase()=='infinity') {
+            if (display.textContent =='Infinity') {
                 display.textContent = 0;
             }
             if (symbol===undefined) {
